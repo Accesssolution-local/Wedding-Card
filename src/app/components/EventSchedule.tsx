@@ -4,17 +4,12 @@ import { Clock, Music, Utensils, Heart, Camera, Sparkles } from "lucide-react";
 
 const events = [
   {
-    time: "5:00 PM",
+    time: "6:00 PM",
     title: "Guests Arrival",
     description: "Welcome & seating with refreshments",
     icon: Sparkles,
   },
-  {
-    time: "6:00 PM",
-    title: "Nikah Ceremony",
-    description: "The sacred union of two souls",
-    icon: Heart,
-  },
+
   {
     time: "6:30 PM",
     title: "Photography",
@@ -23,15 +18,9 @@ const events = [
   },
   {
     time: "7:30 PM",
-    title: "Dinner Reception",
+    title: "Dinner",
     description: "A grand feast to celebrate the occasion",
     icon: Utensils,
-  },
-  {
-    time: "9:00 PM",
-    title: "Music & Celebration",
-    description: "Enjoy the evening with joyful festivities",
-    icon: Music,
   },
 ];
 
@@ -44,7 +33,8 @@ export function EventSchedule() {
       ref={ref}
       className="py-28 px-6"
       style={{
-        background: "linear-gradient(180deg, #fdf6f0 0%, #f5e6d8 50%, #fdf6f0 100%)",
+        background:
+          "linear-gradient(180deg, #fdf6f0 0%, #f5e6d8 50%, #fdf6f0 100%)",
       }}
     >
       <motion.div
@@ -88,14 +78,17 @@ export function EventSchedule() {
           {/* Vertical line */}
           <motion.div
             className="absolute left-8 sm:left-10 top-0 bottom-0 w-px"
-            style={{
-              background: "linear-gradient(180deg, transparent, #c9a87c, transparent)",
-            }}
             initial={{ scaleY: 0 }}
             animate={isInView ? { scaleY: 1 } : {}}
             transition={{ duration: 1.5, ease: "easeOut" }}
             // transform origin top
-            {...{ style: { background: "linear-gradient(180deg, transparent, #c9a87c, transparent)", transformOrigin: "top" } }}
+            {...{
+              style: {
+                background:
+                  "linear-gradient(180deg, transparent, #c9a87c, transparent)",
+                transformOrigin: "top",
+              },
+            }}
           />
 
           {events.map((event, i) => {
@@ -116,7 +109,10 @@ export function EventSchedule() {
                     border: "2px solid rgba(201, 168, 124, 0.4)",
                     boxShadow: "0 4px 20px rgba(139, 109, 80, 0.1)",
                   }}
-                  whileHover={{ scale: 1.1, boxShadow: "0 8px 30px rgba(201, 168, 124, 0.3)" }}
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: "0 8px 30px rgba(201, 168, 124, 0.3)",
+                  }}
                 >
                   <Icon size={20} style={{ color: "#8b6d50" }} />
                 </motion.div>

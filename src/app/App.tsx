@@ -110,7 +110,7 @@ export default function App() {
           <EventSchedule />
           <InvitationMessage />
           <LocationSection />
-          <BlessingsWall />
+          {/* <BlessingsWall /> */}
           <ContactSection />
           <Footer />
         </motion.div>
